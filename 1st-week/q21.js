@@ -1,3 +1,5 @@
+// Electricity Bill Calculation
+
 const units = prompt("Enter the number of units:");
 
 let billAmount = 0;
