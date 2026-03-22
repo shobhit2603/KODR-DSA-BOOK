@@ -1,6 +1,6 @@
 // Shop Discount
 
-let amount = prompt("Enter the price:");
+let amount = Number(prompt("Enter the price:"));
 
 let discount = 0;
 

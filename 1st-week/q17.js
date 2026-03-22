@@ -1,27 +1,27 @@
 // Accept a day number between 1 - 7 and print the corresponding day name.
 
-let day = prompt("Enter a day of the week (1-7): ");
+let day = Number(prompt("Enter a day of the week (1-7): "));
 
 switch (day) {
-    case '1':
+    case 1:
         alert("Monday");
         break;
-    case '2':
+    case 2:
         alert("Tuesday");
         break;
-    case '3':
+    case 3:
         alert("Wednesday");
         break;
-    case '4':
+    case 4:
         alert("Thursday");
         break;
-    case '5':
+    case 5:
         alert("Friday");
         break;
-    case '6':
+    case 6:
         alert("Saturday");
         break;
-    case '7':
+    case 7:
         alert("Sunday");
         break;
     default:

@@ -1,8 +1,8 @@
 // Accept three numbers and find the greatest number among them.
 
-let a = prompt("Enter first number: ");
-let b = prompt("Enter second number: ");
-let c = prompt("Enter third number: ");
+let a = Number(prompt("Enter first number: "));
+let b = Number(prompt("Enter second number: "));
+let c = Number(prompt("Enter third number: "));
 
 if (a > b && a > c) {
     alert(`${a} is the greatest number.`);

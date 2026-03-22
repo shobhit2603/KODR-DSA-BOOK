@@ -1,6 +1,6 @@
 // Print natural numbers up to n
 
-let n = prompt("Enter a number:");
+let n = Number(prompt("Enter a number:"));
 
 function printNaturalNumbers(n) {
     for (let i = 1; i <= n; i++) {
