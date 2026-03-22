@@ -2,7 +2,13 @@
 
 let r = 10;
 
-let surfaceArea = 4 * Math.PI * Math.pow(r, 2);
+function calculateAreaOfSphere(radius) {
+    let surfaceArea = 4 * Math.PI * Math.pow(radius, 2);
+    return surfaceArea;
+}
+
+let surfaceArea = calculateAreaOfSphere(r);
+
 
 console.log("Surface area of the sphere is: " + surfaceArea.toFixed(2));
 

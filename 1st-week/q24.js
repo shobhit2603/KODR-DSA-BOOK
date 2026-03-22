@@ -2,6 +2,10 @@
 
 let n = prompt("Enter a number:");
 
-for (let i = 1; i <= n; i++) {
-    console.log(i);
+function printNaturalNumbers(n) {
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
 }
+
+printNaturalNumbers(n);

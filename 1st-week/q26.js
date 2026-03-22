@@ -2,7 +2,10 @@
 
 let n = prompt("Enter a number to print its Table: ");
 
-for (let i = 1; i <= 10; i++) {
-    console.log(`${n} * ${i} = ${n * i}`);
-
+function printTable(n) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${n} * ${i} = ${n * i}`);
+    }
 }
+
+printTable(n);

@@ -4,8 +4,12 @@ const letter = prompt("Enter a letter:");
 
 const vowel = ['a', 'e', 'i', 'o', 'u'];
 
-if (vowel.includes(letter.toLowerCase())) {
-    console.log(`${letter} is a vowel.`);
-} else {
-    console.log(`${letter} is a consonant.`);
+function checkVowel(letter) {
+    if (vowel.includes(letter.toLowerCase())) {
+        console.log(`${letter} is a vowel.`);
+    } else {
+        console.log(`${letter} is a consonant.`);
+    }
 }
+
+checkVowel(letter);
