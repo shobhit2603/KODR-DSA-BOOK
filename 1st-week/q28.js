@@ -1,7 +1,6 @@
 // Factorial of a number
 
-// let n = prompt("Enter a number to find its factorial: ");
-let n = 5;
+let n = prompt("Enter a number to find its factorial: ");
 
 function factorial(n) {
     if (n === 0 || n === 1) {
