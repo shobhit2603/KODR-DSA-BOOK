@@ -1,34 +1,51 @@
 // Make a choice based calculator using do while switch
 
+const prompt = require('prompt-sync')();
+
 let choice;
 
 do {
-    choice = prompt("Choose an operation: \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Exit");
-    switch (choice) {
-        case '1':
-            let num1 = parseFloat(prompt("Enter first number: "));
-            let num2 = parseFloat(prompt("Enter second number: "));
-            alert(`Result: ${num1 + num2}`);
-            break;
-        case '2':
-            let num3 = parseFloat(prompt("Enter first number: "));
-            let num4 = parseFloat(prompt("Enter second number: "));
-            alert(`Result: ${num3 - num4}`);
-            break;
-        case '3':
-            let num5 = parseFloat(prompt("Enter first number: "));
-            let num6 = parseFloat(prompt("Enter second number: "));
-            alert(`Result: ${num5 * num6}`);
-            break;
-        case '4':
-            let num7 = parseFloat(prompt("Enter first number: "));
-            let num8 = parseFloat(prompt("Enter second number: "));
-            alert(`Result: ${num7 / num8}`);
-            break;
-        case '5':
-            alert("Exiting the calculator.");
-            break;
-        default:
-            alert("Invalid choice. Please try again.");
+    console.log("\nChoose an operation:");
+    console.log("1. Addition");
+    console.log("2. Subtraction");
+    console.log("3. Multiplication");
+    console.log("4. Division");
+    console.log("5. Exit");
+
+    choice = prompt("Enter your choice: ");
+
+    if (choice === '5') {
+        console.log("Exiting the calculator.");
+        break;
     }
-} while (choice !== '5');   
+
+    if (['1', '2', '3', '4'].includes(choice)) {
+        let num1 = parseFloat(prompt("Enter first number: "));
+        let num2 = parseFloat(prompt("Enter second number: "));
+        let result;
+
+        switch (choice) {
+            case '1':
+                result = num1 + num2;
+                break;
+            case '2':
+                result = num1 - num2;
+                break;
+            case '3':
+                result = num1 * num2;
+                break;
+            case '4':
+                if (num2 === 0) {
+                    console.log("Cannot divide by zero.");
+                    continue;
+                }
+                result = num1 / num2;
+                break;
+        }
+
+        console.log("Result:", result);
+    } else {
+        console.log("Invalid choice. Try again.");
+    }
+
+} while (true);
