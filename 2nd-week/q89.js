@@ -2,12 +2,11 @@
 
 function sortEvenOdd(nums) {
 
-    let n = nums.length;
-
     let even = [];
     let odd = [];
 
-    for (let i = 0; i < n; i++) {
+    // separate values
+    for (let i = 0; i < nums.length; i++) {
 
         if (i % 2 === 0) {
             even.push(nums[i]);
@@ -15,32 +14,15 @@ function sortEvenOdd(nums) {
             odd.push(nums[i]);
         }
     }
+    // sort
+    even.sort((a, b) => a - b); // ascending
+    odd.sort((a, b) => b - a); // descending
 
-    for (let i = 0; i < even.length - 1; i++) {
-        for (let j = 0; j < even.length - 1 - i; j++) {
+    // put back
+    let e = 0;
+    let o = 0;
 
-            if (even[j] > even[j + 1]) {
-                let temp = even[j];
-                even[j] = even[j + 1];
-                even[j + 1] = temp;
-            }
-        }
-    }
-
-    for (let i = 0; i < odd.length - 1; i++) {
-        for (let j = 0; j < odd.length - 1 - i; j++) {
-
-            if (odd[j] < odd[j + 1]) {
-                let temp = odd[j];
-                odd[j] = odd[j + 1];
-                odd[j + 1] = temp;
-            }
-        }
-    }
-
-    let e = 0, o = 0;
-
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i < nums.length; i++) {
 
         if (i % 2 === 0) {
             nums[i] = even[e++];
@@ -48,8 +30,8 @@ function sortEvenOdd(nums) {
             nums[i] = odd[o++];
         }
     }
-
     return nums;
 }
 
-console.log(sortEvenOdd([4,1,2,3]));
+console.log(sortEvenOdd([4, 1, 2, 3])) // [2,3,4,1]
+console.log(sortEvenOdd([2, 1])) // [2,1]
